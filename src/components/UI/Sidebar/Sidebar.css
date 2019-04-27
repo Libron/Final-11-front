@@ -1,0 +1,15 @@
+.Categories .Item:hover {
+    background: #b0bec5 ;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Categories {
+    text-decoration: none;
+}
+
+.Categories .list-group-item.active {
+    color: #0056b3;
+    background-color: inherit;
+    border: 1px solid rgba(0,0,0,.125);
+}

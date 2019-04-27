@@ -1,0 +1,14 @@
+.Product {
+    text-align: center;
+    color: #fff;
+}
+.Product .Image {
+    margin-bottom: 50px;
+}
+.Product h3 {
+    margin-top: 30px;
+}
+
+.Product td{
+    font-style: italic;
+}

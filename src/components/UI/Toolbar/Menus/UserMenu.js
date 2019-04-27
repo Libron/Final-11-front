@@ -5,10 +5,10 @@ import {NavLink as RouterNavLink} from 'react-router-dom';
 const UserMenu = ({user, logout}) => (
     <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>
-            Hello, {user.username}
+            Hello, {user.displayname}
         </DropdownToggle>
         <DropdownMenu right>
-            <DropdownItem tag={RouterNavLink} to={'/product/new'}>
+            <DropdownItem tag={RouterNavLink} to={'/products/new'}>
                 Add New Product
             </DropdownItem>
             <DropdownItem onClick={logout}>
