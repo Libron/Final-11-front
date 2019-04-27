@@ -1,0 +1,16 @@
+.ProductDetails {
+    background: #546e7a;
+    padding: 20px 15px;
+}
+
+.ProductDetails .btn-remove {
+    float: right;
+}
+
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
