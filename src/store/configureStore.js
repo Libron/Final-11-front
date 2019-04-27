@@ -4,10 +4,13 @@ import {connectRouter, routerMiddleware} from "connected-react-router";
 import thunkMiddleware from "redux-thunk";
 import {loadFromLocalStorage, saveToLocalStorage} from "./localStorage";
 
+import usersReducer from "./reducers/usersReducer";
+
 export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
-    router: connectRouter(history)
+    router: connectRouter(history),
+    users: usersReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
