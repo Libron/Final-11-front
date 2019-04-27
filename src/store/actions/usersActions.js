@@ -10,7 +10,7 @@ export const LOGIN_USER_FAILURE = 'LOGIN_USER_FAILURE';
 
 export const LOGOUT_USER = 'LOGOUT_USER';
 
-const registerUserSuccess = () => ({type: REGISTER_USER_SUCCESS});
+const registerUserSuccess = user => ({type: REGISTER_USER_SUCCESS, user});
 const registerUserFailure = error => ({type: REGISTER_USER_FAILURE, error});
 
 const loginUserSuccess = user => ({type: LOGIN_USER_SUCCESS, user});
@@ -41,13 +41,13 @@ export const logoutUser = () => {
 export const registerUser = userData => {
     return dispatch => {
       return axios.post('/users', userData).then(
-          () => {
+          response => {
               NotificationManager.success('New User Registered');
-              dispatch(registerUserSuccess());
+              dispatch(registerUserSuccess(response.data.user));
               dispatch(push('/'));
           },
           error => {
-              NotificationManager.error('Error');
+              NotificationManager.error('Missed some fields. Try again');
               if (error.response) {
                   dispatch(registerUserFailure(error.response.data))
               } else {

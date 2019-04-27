@@ -14,7 +14,7 @@ const initialState = {
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
       case REGISTER_USER_SUCCESS:
-          return {...state, registerError: null};
+          return {...state, registerError: null, user: action.user};
       case REGISTER_USER_FAILURE:
           return {...state, registerError: action.error};
       case LOGIN_USER_SUCCESS:
