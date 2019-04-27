@@ -1,0 +1,17 @@
+.Products {
+    display: flex;
+    flex-basis: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card {
+    width: 30%;
+    margin: 5px 5px 15px 5px;
+}
+
+.btn-buy {
+    margin-top: 15px;
+}
