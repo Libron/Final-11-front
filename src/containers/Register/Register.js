@@ -39,7 +39,7 @@ class Register extends Component {
                 <Form onSubmit={this.submitFormHandler}>
                     <FormElement
                         propertyName="displayname"
-                        title="displayname"
+                        title="Display Name"
                         type="text"
                         value={this.state.displayname}
                         onChange={this.inputChangeHandler}
@@ -72,12 +72,12 @@ class Register extends Component {
 
                     <FormElement
                         propertyName="phone"
-                        title="phone"
+                        title="Phone number"
                         type="text"
                         value={this.state.phone}
                         onChange={this.inputChangeHandler}
                         error={this.getFieldError('phone')}
-                        placeholder="Enter mobile number"
+                        placeholder="+996 779 24 88 88"
                         autoComplete="new-phone"
                     />
 
